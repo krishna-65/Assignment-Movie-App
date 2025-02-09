@@ -5,7 +5,7 @@ import MovieDetailsPage from './pages/MoviePage';
 import Navbar from './components/Navbar';
 import { fetchMovies } from './utils/api';
 import Home from './pages/Home';
-import Watchlist from './components/watchList';
+import Watchlist from './components/WatchList';
 
 const App = () => {
   const { theme } = useTheme(); // Access the theme from context
