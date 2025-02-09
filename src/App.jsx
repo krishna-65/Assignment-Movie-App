@@ -5,6 +5,7 @@ import MovieDetailsPage from './pages/MoviePage';
 import Navbar from './components/Navbar';
 import { fetchMovies } from './utils/api';
 import Home from './pages/Home';
+import Watchlist from './components/watchList';
 
 const App = () => {
   const { theme } = useTheme(); // Access the theme from context
@@ -33,6 +34,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home movies={movies} isLoading={isLoading} error={error} />} />
           <Route path="/movie/:id" element={<MovieDetailsPage />} />
+          <Route path="/watchlist" element={<Watchlist/>}/>
+          <Route path="*" element={() => <h1>Page not found</h1>} />
         </Routes>
       </Router>
     </div>

@@ -29,7 +29,7 @@ const MovieDetailsPage = () => {
   if (loading) {
     return (
       <div className="w-full h-screen flex justify-center items-center text-white text-lg">
-        <div className="animate-pulse">Loading...</div>
+        <div className="animate-pulse text-gray-700">Loading...</div>
       </div>
     );
   }

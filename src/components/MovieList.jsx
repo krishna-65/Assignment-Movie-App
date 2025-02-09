@@ -70,7 +70,7 @@ export default function MovieList({ movies }) {
   };
 
   return (
-    <div className=" p-6 relative">
+    <div className="p-6 relative">
        
 
      
