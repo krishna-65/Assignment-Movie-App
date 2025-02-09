@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import MovieCard from "./MovieCard";
 import { FaChevronDown, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const moviesPerPage = 8; // Show 8 movies per page
+const moviesPerPage = 8; 
 
-export default function MovieList({ movies }) {
+const MovieList = ({ movies }) => {
   const [filteredMovies, setFilteredMovies] = useState({});
   const [currentPage, setCurrentPage] = useState({});
   const [searchTerm, setSearchTerm] = useState("");
@@ -88,7 +88,7 @@ export default function MovieList({ movies }) {
           placeholder="Search movies..."
           value={searchTerm}
           onChange={handleSearch}
-          className="p-3  bg-gray-200 w-[300px] rounded-lg shadow-md text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 bg-transparent border  focus:ring-indigo-500"
+          className="p-3   w-[300px] rounded-lg shadow-md text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 bg-transparent border  focus:ring-indigo-500"
         />
         </div>
 
@@ -96,8 +96,7 @@ export default function MovieList({ movies }) {
   <div>
     <h2 className="text-2xl font-bold text-white mb-4">{selectedCategory}</h2>
 
-    {/* Movie Grid */}
-    <motion.div layout className="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <motion.div layout className="grid grid-cols-1 md:grid-cols-4 gap-6">
       <AnimatePresence>
         {getFilteredMoviesBySearch(filteredMovies[selectedCategory])
           .slice(
@@ -174,3 +173,5 @@ export default function MovieList({ movies }) {
     </div>
   );
 }
+
+export default MovieList;
